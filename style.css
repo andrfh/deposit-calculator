@@ -1,0 +1,137 @@
+* {
+    font-family: 'Champagne & Limousines', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-text)
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-text)
+}
+
+h3, label {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+label {
+    color: var(--label);
+}
+
+:root {
+  --primary-text: #083E9E;
+  --label: #4A5568;
+  --placeholder: #3B3B3B70;
+  --input: #0088CC08;
+  --input-border: #0088CC14;
+  --input-hover: #0088CC12;
+  --input-hover-border: #0088CC16;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    position: relative;
+}
+
+.app_info > h1 {
+    width: 30%;
+    height: 63%;
+    text-align: left;
+    position: absolute;
+}
+
+#lottie-animation {
+    width: 586px;
+    height: 586px;
+    transition: all 0.5s;
+}
+
+#lottie-animation:hover  {
+    transform: rotateZ(2deg) scale(1.05);
+}
+
+.app_func {
+    margin-top: 5%;
+    display: flex;
+    height: 63%;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    width: 33%;
+}
+
+.app_func-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: var(--input);
+    border: 1px solid var(--input-border);
+    border-radius: 0.25rem;
+    outline:none;
+    transition: all 0.3s;
+}
+
+input:hover {
+    background: var(--input-hover);
+    border: 1px solid var(--input-hover-border);
+}
+
+input:focus {
+    background: var(--input-hover);
+    border: 1px solid var(--input-hover-border);
+}
+
+input::placeholder {
+    color: var(--placeholder)
+}
+
+.app_func-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+@media (max-width: 1000px) {
+    .app_info {
+        display: none;
+    }
+    
+    .app_func {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .app{
+        padding: 0 10%;
+    }
+}
